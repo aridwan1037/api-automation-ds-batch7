@@ -69,7 +69,7 @@
       "specs": [
         {
           "title": "Test Case 1",
-          "ok": false,
+          "ok": true,
           "tags": [],
           "tests": [
             {
@@ -81,51 +81,17 @@
               "results": [
                 {
                   "workerIndex": 0,
-                  "status": "failed",
-                  "duration": 477,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\tests\\api-test.spec.js:25:17)\n    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\workerMain.js:339:9)\n    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\testInfo.js:286:11)\n    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\workerMain.js:331:7)\n    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\testInfo.js:286:11)",
-                    "matcherResult": {
-                      "actual": false,
-                      "expected": true,
-                      "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
-                      "name": "toBe",
-                      "pass": false
-                    },
-                    "location": {
-                      "file": "D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\tests\\api-test.spec.js",
-                      "column": 17,
-                      "line": 25
-                    }
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\tests\\api-test.spec.js",
-                        "column": 17,
-                        "line": 25
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\u001b[2m    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\tests\\api-test.spec.js:25:17)\u001b[22m\n\u001b[2m    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\workerMain.js:339:9)\u001b[22m\n\u001b[2m    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\testInfo.js:286:11)\u001b[22m\n\u001b[2m    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\workerMain.js:331:7)\u001b[22m\n\u001b[2m    at D:\\Course\\QA Bootcamp Batch 7 (D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\node_modules\\playwright\\lib\\worker\\testInfo.js:286:11)\u001b[22m"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 238,
+                  "errors": [],
                   "stdout": [],
-                  "stderr": [
-                    {
-                      "text": "AJV validation Errors:  data/id must be integer\n"
-                    }
-                  ],
+                  "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-25T07:49:56.673Z",
-                  "attachments": [],
-                  "errorLocation": {
-                    "file": "D:\\Course\\QA Bootcamp Batch 7 (Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\Digital Skola)\\Sesi 7\\api-automation-ds-batch7\\tests\\api-test.spec.js",
-                    "column": 17,
-                    "line": 25
-                  }
+                  "startTime": "2024-12-25T08:16:17.634Z",
+                  "attachments": []
                 }
               ],
-              "status": "unexpected"
+              "status": "expected"
             }
           ],
           "id": "ea20521d6fcf43dcdb4f-afb9633d6bc48b7ba920",
@@ -138,11 +104,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-25T07:49:55.535Z",
-    "duration": 1654.5539999999999,
-    "expected": 0,
+    "startTime": "2024-12-25T08:16:16.805Z",
+    "duration": 1101.7060000000001,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

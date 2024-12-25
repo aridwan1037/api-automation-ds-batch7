@@ -5,54 +5,44 @@ const { log, error } = require("console");
 const ajv = new Ajv()
 
 test("Test Case 1", async ({ request }) => {
-  const response = await request.get("https://api.restful-api.dev/objects/7");
-  
-  expect(response.status()).toBe(200)
-  expect(response.ok()).toBeTruthy()
-
+  const response = await request.get("https://reqres.in/api/users/2");
   const responseData = await response.json()
 
-  expect(responseData.id).toBe("7")
-  expect(responseData.name).toBe("Apple MacBook Pro 16")
-  expect(responseData.data.year).toBe(2019)
-  expect(responseData.data["CPU model"]).toBe("Intel Core i9")
-
-  const valid = ajv.validate(require('./json-schema/get-object-schema.json'), responseData)
+  //assertion
+  expect(response.status()).toBe(200)
+  expect(responseData.data.email).toBe("janet.weaver@reqres.in")
+  
+  const valid = ajv.validate(require('./json-schema/get-singleObject-schema.json'), responseData)
 
   if(!valid){
     console.error("AJV validation Errors: ",ajv.errorsText())
   }
   expect(valid).toBe(true)
-
-
-
-//   console.log(responses.status());
-//   console.log(await responses.json());
 });
 
-test("Test Case 2", async ({ request }) => {
-  const bodyData = {
-    name: "Apple MacBook Pro 16",
-    data: {
-      year: 2019,
-      price: 1849.99,
-      "CPU model": "Intel Core i9",
-      "Hard disk size": "1 TB",
-    },
-  };
+// test("Test Case 2", async ({ request }) => {
+//   const bodyData = {
+//     name: "Apple MacBook Pro 16",
+//     data: {
+//       year: 2019,
+//       price: 1849.99,
+//       "CPU model": "Intel Core i9",
+//       "Hard disk size": "1 TB",
+//     },
+//   };
 
-  const headerData = {
-    Accept: "application/json",
-  };
+//   const headerData = {
+//     Accept: "application/json",
+//   };
 
-  const response = await request.post("https://api.restful-api.dev/objects", {
-    headers: headerData,
-    data: bodyData,
-  });
+//   const response = await request.post("https://api.restful-api.dev/objects", {
+//     headers: headerData,
+//     data: bodyData,
+//   });
 
-  console.log(response.status());
-  console.log(await response.json());
-});
+//   console.log(response.status());
+//   console.log(await response.json());
+// });
 
 
 /*
