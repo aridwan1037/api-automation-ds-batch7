@@ -4,45 +4,49 @@ const { log, error } = require("console");
 
 const ajv = new Ajv()
 
-test("Test Case 1", async ({ request }) => {
+test("Tugas GET", async ({ request }) => {
   const response = await request.get("https://reqres.in/api/users/2");
   const responseData = await response.json()
+  const valid = ajv.validate(require('./json-schema/get-singleObject-schema.json'), responseData)
 
   //assertion
   expect(response.status()).toBe(200)
   expect(responseData.data.email).toBe("janet.weaver@reqres.in")
-  
-  const valid = ajv.validate(require('./json-schema/get-singleObject-schema.json'), responseData)
+  expect(valid).toBe(true)  
 
   if(!valid){
     console.error("AJV validation Errors: ",ajv.errorsText())
   }
-  expect(valid).toBe(true)
+
 });
 
-// test("Test Case 2", async ({ request }) => {
-//   const bodyData = {
-//     name: "Apple MacBook Pro 16",
-//     data: {
-//       year: 2019,
-//       price: 1849.99,
-//       "CPU model": "Intel Core i9",
-//       "Hard disk size": "1 TB",
-//     },
-//   };
+test("Tugas POST", async ({ request }) => {
+  const bodyData = {
+    "name": "morpheus",
+    "job": "leader"
+  };
 
-//   const headerData = {
-//     Accept: "application/json",
-//   };
+  const headerData = {
+    Accept: "application/json",
+  };
 
-//   const response = await request.post("https://api.restful-api.dev/objects", {
-//     headers: headerData,
-//     data: bodyData,
-//   });
+  const response = await request.post("https://reqres.in/api/users", {
+    headers: headerData,
+    data: bodyData,
+  });
+  const responseData = await response.json()
+  const valid = ajv.validate(require('./json-schema/post-createUser-schema.json'), responseData)
 
-//   console.log(response.status());
-//   console.log(await response.json());
-// });
+  //assertion
+  expect(response.status()).toBe(201)
+  expect(responseData).toHaveProperty('id')
+  expect(valid).toBe(true)
+
+  if(!valid){
+    console.error("AJV validation Errors: ",ajv.errorsText())
+  }
+
+});
 
 
 /*

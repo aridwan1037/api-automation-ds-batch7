@@ -68,7 +68,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Test Case 1",
+          "title": "Tugas POST",
           "ok": true,
           "tags": [],
           "tests": [
@@ -82,21 +82,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 238,
+                  "duration": 841,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-25T08:16:17.634Z",
+                  "startTime": "2024-12-25T09:11:49.677Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "ea20521d6fcf43dcdb4f-afb9633d6bc48b7ba920",
+          "id": "ea20521d6fcf43dcdb4f-fa36667ab4539b7ba5d9",
           "file": "api-test.spec.js",
-          "line": 7,
+          "line": 23,
           "column": 1
         }
       ]
@@ -104,8 +104,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-25T08:16:16.805Z",
-    "duration": 1101.7060000000001,
+    "startTime": "2024-12-25T09:11:48.810Z",
+    "duration": 1739.317,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
