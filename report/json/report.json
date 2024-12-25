@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "always",
     "reporter": [
@@ -68,7 +68,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Tugas POST",
+          "title": "Tugas GET",
           "ok": true,
           "tags": [],
           "tests": [
@@ -82,12 +82,44 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 841,
+                  "duration": 366,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2024-12-25T09:11:49.677Z",
+                  "startTime": "2024-12-25T09:51:23.239Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea20521d6fcf43dcdb4f-9556fe066f2f20ebf4b8",
+          "file": "api-test.spec.js",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "Tugas POST",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "status": "passed",
+                  "duration": 762,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-25T09:51:23.337Z",
                   "attachments": []
                 }
               ],
@@ -98,15 +130,79 @@
           "file": "api-test.spec.js",
           "line": 23,
           "column": 1
+        },
+        {
+          "title": "Tugas DELETE",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "status": "passed",
+                  "duration": 763,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-25T09:51:23.291Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea20521d6fcf43dcdb4f-781daf6f760698200506",
+          "file": "api-test.spec.js",
+          "line": 51,
+          "column": 1
+        },
+        {
+          "title": "Tugas PUT",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "status": "passed",
+                  "duration": 799,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2024-12-25T09:51:23.293Z",
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ea20521d6fcf43dcdb4f-008ed1e1caad5ee95056",
+          "file": "api-test.spec.js",
+          "line": 59,
+          "column": 1
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2024-12-25T09:11:48.810Z",
-    "duration": 1739.317,
-    "expected": 1,
+    "startTime": "2024-12-25T09:51:22.193Z",
+    "duration": 1938.27,
+    "expected": 4,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

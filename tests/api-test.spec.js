@@ -48,6 +48,41 @@ test("Tugas POST", async ({ request }) => {
 
 });
 
+test('Tugas DELETE', async ({ request }) => {
+    const response = await request.delete("https://reqres.in/api/users/2")
+
+  //assertion
+  expect(response.status()).toBe(204)
+    
+});
+
+test("Tugas PUT", async ({ request }) => {
+    const bodyData = {
+      "name": "morpheus",
+      "job": "zion resident"
+    };
+  
+    const headerData = {
+      Accept: "application/json",
+    };
+  
+    const response = await request.put("https://reqres.in/api/users/2", {
+      headers: headerData,
+      data: bodyData,
+    });
+    const responseData = await response.json()
+    const valid = ajv.validate(require('./json-schema/put-update-schema.json'), responseData)
+  
+    //assertion
+    expect(response.status()).toBe(200)
+    expect(responseData.job).toBe('zion resident')
+    expect(valid).toBe(true)
+  
+    if(!valid){
+      console.error("AJV validation Errors: ",ajv.errorsText())
+    }
+  
+  });
 
 /*
 test.describe("Positif Test Cases", () => {
